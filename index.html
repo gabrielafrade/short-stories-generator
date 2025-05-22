@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -18,7 +19,7 @@
         <h1>AI Short-Stories Generator</h1>
       </header>
       <main>
-        <form action="">
+        <form id="poem-generator-form" action="">
           <input
             type="text"
             placeholder="Enter a topic for the short-story"
@@ -28,12 +29,7 @@
           />
           <input type="submit" value="Submit" class="submit-button" />
         </form>
-        <div class="short-story">
-          There were only enough supplies for one of us to survive the winter.
-          We were trapped, isolated in the wilderness at the edge of a harsh
-          winter that would trap us here. Of course, I was the one who had
-          planned it that way.
-        </div>
+        <div class="short-story" id="short-story"></div>
       </main>
       <footer>
         Coded by
