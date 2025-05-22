@@ -16,8 +16,15 @@ function generateShortStory(event) {
   let context =
     "You are a short-story writer that gets it's inspiration in sci-fi and surrealism. Your mission is to generate a really short-story, maximum 5 lines. Make sure to follow user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let shortStoryElement = document.querySelector("#short-story");
+  shortStoryElement.classList.remove("hidden");
+  shortStoryElement.innerHTML = `<div class=generating>⏳ Generating a short story about ${instructionsInput.value} </div>`;
+
   axios.get(apiUrl).then(displayShortStory);
 }
 
-let shortStoryElement = document.querySelector("#short-story-generator-form");
-shortStoryElement.addEventListener("submit", generateShortStory);
+let shortStoryFormElement = document.querySelector(
+  "#short-story-generator-form"
+);
+shortStoryFormElement.addEventListener("submit", generateShortStory);
