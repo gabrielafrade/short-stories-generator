@@ -19,7 +19,7 @@ function generateShortStory(event) {
 
   let shortStoryElement = document.querySelector("#short-story");
   shortStoryElement.classList.remove("hidden");
-  shortStoryElement.innerHTML = `<div class=generating>⏳ Generating a short story about ${instructionsInput.value} </div>`;
+  shortStoryElement.innerHTML = `<div class= "generating">⏳ Generating a short story about ${instructionsInput.value} </div>`;
 
   axios.get(apiUrl).then(displayShortStory);
 }
